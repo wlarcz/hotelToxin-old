@@ -1,8 +1,6 @@
-import 'bootstrap/dist/css/bootstrap.min.css'
+import "./styles.scss"
 
-import "./styles.css"
-
-import 'bootstrap';
+import './bootstrap/bootstrap.js';
 
 console.log("hello world!")
 
