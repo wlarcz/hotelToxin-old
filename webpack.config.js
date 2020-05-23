@@ -23,14 +23,28 @@ module.exports = {
                     'sass-loader',
 
                 ]
-                /*
-                test: /\.css$/,
+            },
+            {
+                test: /\.(png|jpe?g|gif|svg)$/i,
                 use: [
                     {
-                        loader: MiniCssExtractPlugin.loader,
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: './',
+                            userelativePath: true
+                        }
                     },
-                    'css-loader',
-                ]*/
+                    {
+                        loader: 'image-webpack-loader',
+                        options: {
+                            mozjpeg: {
+                                progressive: true,
+                                quality: 65
+                            }
+                        }
+                    },
+                ]
             }
         ]
     },
